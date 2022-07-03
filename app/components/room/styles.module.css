@@ -1,0 +1,70 @@
+.mainContainer{
+    position: absolute;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #181a1e;
+}
+
+.fullScreenRoom{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+    z-index: 10;
+}
+
+.minimizedRoom{
+    bottom: 0px;
+    right: 0px;
+    width: 30%;
+    height: 40vh;
+}
+
+.videoContainer{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttonContainer{
+    height: 15%;
+    width: 100%;
+    background-color: #333;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-right: 1em;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width:990px){
+    .minimizedRoom{
+        bottom: 80px;
+        width: 92%;
+    }
+}
+@media (max-width:768px){
+    .minimizedRoom{
+        width: 91%;
+    }
+}
+@media (max-width:550px){
+    .minimizedRoom{
+        width: 82%;
+    }
+}

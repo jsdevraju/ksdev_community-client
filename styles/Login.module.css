@@ -1,0 +1,89 @@
+.login {
+    background-image: url('../app/components/asset/icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.loginBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.wrapper {
+    width: 550px;
+    background: var(--bg-color);
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+.wrapper h1 {
+    text-align: center;
+}
+
+.wrapper p {
+    text-align: center;
+}
+
+.formControl{
+    margin-bottom: 0.6em;
+}
+
+.formControl label {
+    display: block;
+    color: var(--text-color);
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.formControl input {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    outline: none;
+}
+
+.forgot{
+    text-align: left !important;
+    color: #04a6e6;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 0.8em;
+}
+.forgot:hover{
+    text-decoration: underline;
+}
+
+.form button{
+    margin-top: 1em;
+}
+
+.footer p{
+    text-align: left !important;
+    margin-top: 1em;
+    color: var(--secondary-color);
+    font-size: 1em;
+}
+
+.footer p span{
+    color: #04a6e6;
+    cursor: pointer;
+}
+
+@media (max-width:550px){
+    .wrapper{
+        width: 100%;
+    }
+    .loginBox{
+        padding: 1em;
+    }
+}

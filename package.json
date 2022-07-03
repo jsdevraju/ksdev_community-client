@@ -9,9 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
+    "axios": "^0.27.2",
+    "moment": "^2.29.3",
     "next": "12.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-avatar": "^5.0.1",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.2.0",
+    "react-icons": "^4.4.0",
+    "react-loader-spinner": "^5.1.5",
+    "react-redux": "^8.0.2",
+    "react-tooltip": "^4.2.21",
+    "simple-peer": "^9.11.1",
+    "socket.io-client": "^4.5.1"
   },
   "devDependencies": {
     "eslint": "8.18.0",

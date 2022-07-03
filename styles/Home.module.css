@@ -1,116 +1,226 @@
-.container {
-  padding: 0 2rem;
+.wrapper{
+    display: flex;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.userList{
+    background-color: #202224;
+    height: 100vh;
+    padding: 0.7em;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.icon{
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border: none;
+    outline: none;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+.friendList{
+    background-color: #2F3135;
+    height: 100vh;
+    width: 230px;
+    padding: 0.7em;
+    display: none;
     flex-direction: column;
-  }
+    align-items: center;
+    position: relative;
+    left: -1000px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 11;
+}
+
+.friendListActive{
+    left: 0px;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+
+.msTitle{
+    font-size: 0.8em;
+    color: var(--text-color);
+    margin-top: 0.6em;
+    margin-bottom: 0.8em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+.header button{
+    width: 100%;
+}
+
+.chatArea{
+    background-color: #35393F;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperFriend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+   
+}
+
+.singleFriend{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+.active{
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 100%;
+}
+.invitation{
+   margin-top: 2em;
+}
+
+.invitation .msTitle{
+    margin-bottom: 2em;
+}
+
+.navbar{
+    border-bottom: 2px solid #464545;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bars{
+    color: #fff;
+    cursor: pointer;
+}
+
+.chatList{
+    flex: 1;
+    padding: 1em;
+    margin-top: 1em;
+    overflow: auto;
+}
+
+.sendMessage{
+    padding: 1em;
+}
+
+.acpRej svg{
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Model */
+
+.inviteModel{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    background: #fff;
+    padding: 1.4em;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out
+
+}
+
+.activeModel{
+    visibility: visible;
+    opacity: 1;
+}
+
+.inviteOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000098;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out
+}
+
+.activeOverlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+.inviteModel h3 {
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+.inviteModel p {
+    font-weight: 500;
+    margin-bottom: 1em;
+    color: var(--text-color);
+    font-size: 0.8em;
+}
+
+.inviteModel input{
+    display: block;
+    width: 100%;
+    padding: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    outline: none;
+    margin-bottom: 1em;
+}
+
+.chatMain{
+    color: var(--text-color);
+}
+.h3{
+    font-size: 1.1em;
+    margin-top: 0.4em;
+    margin-bottom: 0.3em;
+}
+.p{
+    margin-bottom: 1em;
+}
+
+.singleChat{
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    margin-top: 1em;
+}
+
+.userMessage h4{
+    font-weight: 600;
+}
+
+.userMessage h4 span{
+    color: #636161;
+}
+
+.userMessage p{
+    font-size: 0.9em;
 }
